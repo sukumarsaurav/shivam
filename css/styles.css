@@ -176,7 +176,7 @@ img {
     right: -5px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     .menu-btn {
         display: none;
     }
@@ -1475,4 +1475,11 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Hide mobile-only elements on larger screens */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
 }
