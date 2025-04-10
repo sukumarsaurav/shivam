@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Modern Fashion E-Commerce</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="index.html" class="logo">StyleHub</a>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="category.html?category=women">Women</a></li>
+                        <li><a href="category.html?category=men">Men</a></li>
+                        <li><a href="category.html?category=kids">Kids</a></li>
+                        <li><a href="category.html?category=sale">Sale</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="wishlist.html" class="icon-btn">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="account.html" class="icon-btn desktop-only">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="icon-btn cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="container">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" placeholder="Search products..." class="search-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs" id="categoryTabs">
+        <div class="tabs-container">
+            <button class="tab active" data-category="all">All</button>
+            <button class="tab" data-category="men">Men</button>
+            <button class="tab" data-category="women">Women</button>
+            <button class="tab" data-category="kids">Kids</button>
+            <button class="tab" data-category="categories">
+                <i class="fas fa-th-list"></i>
+            </button>
+        </div>
+        <div class="subcategories-container" id="subcategoriesContainer">
+            <!-- Subcategories will be loaded dynamically -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Banner -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-slider" id="heroSlider">
+                    <div class="hero-slide active">
+                        <div class="hero-content">
+                            <h1>Summer Collection 2024</h1>
+                            <p>Discover the hottest trends for the season</p>
+                            <a href="category.html?category=summer" class="btn primary-btn">Shop Now</a>
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <img src="https://placehold.co/1200x600" alt="Summer Collection" class="hero-img">
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-content">
+                            <h1>New Arrivals</h1>
+                            <p>Be the first to wear our latest styles</p>
+                            <a href="category.html?category=new-arrivals" class="btn primary-btn">Explore</a>
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <img src="https://placehold.co/1200x600" alt="New Arrivals" class="hero-img">
+                    </div>
+                    <div class="hero-slide">
+                        <div class="hero-content">
+                            <h1>Sale Up To 50% Off</h1>
+                            <p>Limited time offer on selected items</p>
+                            <a href="category.html?category=sale" class="btn primary-btn">Shop Sale</a>
+                        </div>
+                        <div class="hero-overlay"></div>
+                        <img src="https://placehold.co/1200x600" alt="Sale" class="hero-img">
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deal of the Day -->
+        <section class="deals-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Deal of the Day</h2>
+                    <a href="deals.html" class="view-all">View All</a>
+                </div>
+                <div class="products-slider" id="dealsSlider">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Products</h2>
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="all">All</button>
+                        <button class="tab-btn" data-tab="bestsellers">Bestsellers</button>
+                        <button class="tab-btn" data-tab="trending">Trending</button>
+                        <button class="tab-btn" data-tab="new">New</button>
+                    </div>
+                </div>
+                <div class="products-grid" id="featuredProducts">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions -->
+        <section class="promotions-section">
+            <div class="container">
+                <div class="promotions-grid">
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3>Summer Sale</h3>
+                            <p>Up to 50% off on selected summer items. Limited time offer.</p>
+                            <a href="category.html?category=sale" class="btn primary-btn">Shop Now</a>
+                        </div>
+                        <div class="promo-overlay"></div>
+                        <img src="https://placehold.co/600x400" alt="Summer Sale" class="promo-img">
+                    </div>
+                    <div class="promo-card">
+                        <div class="promo-content">
+                            <h3>New Collection</h3>
+                            <p>Discover our latest arrivals. Fresh styles for the new season.</p>
+                            <a href="category.html?category=new-arrivals" class="btn primary-btn">Explore</a>
+                        </div>
+                        <div class="promo-overlay"></div>
+                        <img src="https://placehold.co/600x400" alt="New Collection" class="promo-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="new-arrivals-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>New Arrivals</h2>
+                    <a href="category.html?category=new-arrivals" class="view-all">View All</a>
+                </div>
+                <div class="products-slider" id="newArrivalsSlider">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>StyleHub</h3>
+                    <p>Discover the latest trends in fashion with StyleHub. Quality clothing for every occasion.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="category.html?category=women">Women</a></li>
+                        <li><a href="category.html?category=men">Men</a></li>
+                        <li><a href="category.html?category=kids">Kids</a></li>
+                        <li><a href="category.html?category=sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="customer-service.html">Customer Service</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="search.html" class="nav-item">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </a>
+        <a href="wishlist.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Cart</span>
+            <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="menu-header">
+            <h3>Menu</h3>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="menu-content">
+            <div class="menu-account">
+                <a href="login.html" class="btn primary-btn">Login</a>
+                <a href="register.html" class="btn outline-btn">Register</a>
+            </div>
+            <nav class="menu-nav">
+                <ul>
+                    <li><a href="category.html?category=women">Women</a></li>
+                    <li><a href="category.html?category=men">Men</a></li>
+                    <li><a href="category.html?category=kids">Kids</a></li>
+                    <li><a href="category.html?category=sale">Sale</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

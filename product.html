@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - StyleHub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="index.html" class="logo">StyleHub</a>
+                <nav class="desktop-nav">
+                    <ul>
+                        <li><a href="category.html?category=women">Women</a></li>
+                        <li><a href="category.html?category=men">Men</a></li>
+                        <li><a href="category.html?category=kids">Kids</a></li>
+                        <li><a href="category.html?category=sale">Sale</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="wishlist.html" class="icon-btn">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="account.html" class="icon-btn desktop-only">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="cart.html" class="icon-btn cart-btn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge">3</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="container">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" placeholder="Search products..." class="search-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Back Button (Mobile) -->
+        <div class="container mobile-only">
+            <button class="back-btn" id="backBtn">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back</span>
+            </button>
+        </div>
+
+        <!-- Product Details -->
+        <section class="product-section">
+            <div class="container">
+                <div class="product-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <a href="category.html?category=men">Men</a>
+                    <i class="fas fa-chevron-right"></i>
+                    <span>T-Shirts</span>
+                </div>
+                
+                <div class="product-container">
+                    <div class="product-gallery">
+                        <div class="main-image" id="mainImage">
+                            <img src="https://placehold.co/500x600" alt="Classic White T-Shirt" class="product-img">
+                        </div>
+                        <div class="thumbnail-container" id="thumbnailContainer">
+                            <div class="thumbnail active" data-img="https://placehold.co/500x600">
+                                <img src="https://placehold.co/500x600" alt="Product Thumbnail 1">
+                            </div>
+                            <div class="thumbnail" data-img="https://placehold.co/500x600">
+                                <img src="https://placehold.co/500x600" alt="Product Thumbnail 2">
+                            </div>
+                            <div class="thumbnail" data-img="https://placehold.co/500x600">
+                                <img src="https://placehold.co/500x600" alt="Product Thumbnail 3">
+                            </div>
+                            <div class="thumbnail" data-img="https://placehold.co/500x600">
+                                <img src="https://placehold.co/500x600" alt="Product Thumbnail 4">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-info">
+                        <h1 class="product-title">Classic Cotton T-Shirt</h1>
+                        
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">4.5 (128 reviews)</span>
+                        </div>
+                        
+                        <div class="product-price">
+                            <span class="current-price">$29.99</span>
+                            <span class="original-price">$39.99</span>
+                            <span class="discount-badge">25% OFF</span>
+                        </div>
+                        
+                        <div class="product-description">
+                            <p>A versatile and comfortable cotton t-shirt that's perfect for everyday wear. Made from 100% organic cotton for breathability and softness.</p>
+                        </div>
+                        
+                        <div class="product-options">
+                            <div class="option-group">
+                                <h3>Color: <span id="selectedColor">White</span></h3>
+                                <div class="color-options">
+                                    <button class="color-option active" data-color="White" style="background-color: #fff; border: 1px solid #ddd;"></button>
+                                    <button class="color-option" data-color="Black" style="background-color: #000;"></button>
+                                    <button class="color-option" data-color="Navy" style="background-color: #000080;"></button>
+                                    <button class="color-option" data-color="Gray" style="background-color: #808080;"></button>
+                                </div>
+                            </div>
+                            
+                            <div class="option-group">
+                                <h3>Size: <span id="selectedSize"></span></h3>
+                                <div class="size-options">
+                                    <button class="size-option" data-size="XS">XS</button>
+                                    <button class="size-option" data-size="S">S</button>
+                                    <button class="size-option" data-size="M">M</button>
+                                    <button class="size-option" data-size="L">L</button>
+                                    <button class="size-option" data-size="XL">XL</button>
+                                    <button class="size-option" data-size="XXL">XXL</button>
+                                </div>
+                                <a href="#" class="size-guide">Size Guide</a>
+                            </div>
+                            
+                            <div class="option-group">
+                                <h3>Quantity</h3>
+                                <div class="quantity-selector">
+                                    <button class="quantity-btn minus" id="decreaseQuantity">
+                                        <i class="fas fa-minus"></i>
+                                    </button>
+                                    <input type="number" value="1" min="1" class="quantity-input" id="quantity">
+                                    <button class="quantity-btn plus" id="increaseQuantity">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn primary-btn" id="buyNowBtn">Buy Now</button>
+                            <button class="btn outline-btn" id="addToCartBtn">
+                                <i class="fas fa-shopping-bag"></i>
+                                Add to Bag
+                            </button>
+                            <button class="btn icon-btn" id="wishlistBtn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="btn icon-btn">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-truck"></i>
+                                <span>Free shipping on orders over $50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Product Tabs -->
+        <section class="product-tabs-section">
+            <div class="container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="details">Details</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews (128)</button>
+                </div>
+                
+                <div class="tab-content active" id="details">
+                    <div class="details-grid">
+                        <div>
+                            <h3>Product Details</h3>
+                            <ul>
+                                <li>100% organic cotton</li>
+                                <li>Regular fit</li>
+                                <li>Crew neck</li>
+                                <li>Machine washable</li>
+                                <li>Imported</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Care Instructions</h3>
+                            <ul>
+                                <li>Machine wash cold with similar colors</li>
+                                <li>Do not bleach</li>
+                                <li>Tumble dry low</li>
+                                <li>Cool iron if needed</li>
+                                <li>Do not dry clean</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="shipping">
+                    <div class="shipping-info">
+                        <div>
+                            <h3>Shipping</h3>
+                            <p>We offer free standard shipping on all orders over $50. For orders under $50, standard shipping costs $5.99. Expedited shipping is available for an additional fee. Most orders are processed and shipped within 1-2 business days.</p>
+                        </div>
+                        <div>
+                            <h3>Returns</h3>
+                            <p>We accept returns within 30 days of delivery. Items must be unworn, unwashed, and in the original packaging with tags attached. Return shipping is free for exchanges, or $5.99 for refunds.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="reviews">
+                    <div class="reviews-container">
+                        <div class="reviews-header">
+                            <div>
+                                <h3>Customer Reviews</h3>
+                                <div class="rating-summary">
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span>Based on 128 reviews</span>
+                                </div>
+                            </div>
+                            <button class="btn outline-btn">Write a Review</button>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div>
+                                        <h4>John D.</h4>
+                                        <div class="review-meta">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span>2 weeks ago</span>
+                                        </div>
+                                    </div>
+                                    <span class="verified-badge">Verified Purchase</span>
+                                </div>
+                                <p class="review-text">This t-shirt is exactly what I was looking for. The material is soft and comfortable, and the fit is perfect. I've already washed it several times and it still looks great. Highly recommend!</p>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div>
+                                        <h4>Sarah M.</h4>
+                                        <div class="review-meta">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                            <span>1 month ago</span>
+                                        </div>
+                                    </div>
+                                    <span class="verified-badge">Verified Purchase</span>
+                                </div>
+                                <p class="review-text">The quality of this shirt is great, but I found it runs a bit small. I usually wear a medium, but I should have ordered a large. Otherwise, the material is nice and the color is exactly as shown in the photos.</p>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div>
+                                        <h4>Michael B.</h4>
+                                        <div class="review-meta">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <span>3 months ago</span>
+                                        </div>
+                                    </div>
+                                    <span class="verified-badge">Verified Purchase</span>
+                                </div>
+                                <p class="review-text">Great value for the price. The fabric is soft and breathable, perfect for summer. Will definitely buy more in different colors.</p>
+                            </div>
+                            
+                            <button class="btn outline-btn load-more">Load More Reviews</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Similar Products -->
+        <section class="similar-products-section">
+            <div class="container">
+                <h2>You May Also Like</h2>
+                <div class="products-slider" id="similarProductsSlider">
+                    <!-- Products will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>StyleHub</h3>
+                    <p>Discover the latest trends in fashion with StyleHub. Quality clothing for every occasion.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="category.html?category=women">Women</a></li>
+                        <li><a href="category.html?category=men">Men</a></li>
+                        <li><a href="category.html?category=kids">Kids</a></li>
+                        <li><a href="category.html?category=sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="customer-service.html">Customer Service</a></li>
+                        <li><a href="track-order.html">Track Order</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="search.html" class="nav-item">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </a>
+        <a href="wishlist.html" class="nav-item">
+            <i class="fas fa-heart"></i>
+            <span>Wishlist</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <i class="fas fa-shopping-bag"></i>
+            <span>Cart</span>
+            <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Account</span>
+        </a>
+    </nav>
+
+    <script src="js/app.js"></script>
+    <script src="js/product.js"></script>
+</body>
+</html>
