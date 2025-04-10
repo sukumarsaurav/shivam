@@ -440,3 +440,44 @@ if (subcategoriesContainer) {
         }
     });
 }
+// Add this code to your existing app.js file
+
+// Search functionality
+const searchToggle = document.getElementById('searchToggle');
+const searchOverlay = document.getElementById('searchOverlay');
+const searchBackBtn = document.getElementById('searchBackBtn');
+const mobileSearchInput = document.getElementById('mobileSearchInput');
+
+if (searchToggle && searchOverlay && searchBackBtn) {
+    // Open search overlay
+    searchToggle.addEventListener('click', () => {
+        searchOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        
+        // Focus on search input after a small delay to ensure the overlay is visible
+        setTimeout(() => {
+            if (mobileSearchInput) {
+                mobileSearchInput.focus();
+            }
+        }, 300);
+    });
+    
+    // Close search overlay
+    searchBackBtn.addEventListener('click', () => {
+        searchOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Handle search submission
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                // In a real app, this would submit the search
+                const searchTerm = mobileSearchInput.value.trim();
+                if (searchTerm) {
+                    window.location.href = `search-results.html?q=${encodeURIComponent(searchTerm)}`;
+                }
+            }
+        });
+    }
+}

@@ -86,7 +86,8 @@ img {
     width: 40px;
     height: 40px;
     padding: 0;
-    border-radius: 50%;
+    border: none;
+    background-color:none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1408,4 +1409,70 @@ img {
     .header-actions .icon-btn:first-child {
         display: none; /* Keep search icon hidden on larger screens */
     }
+}
+/* Add these styles to your existing CSS file */
+
+/* Search Bar in Header */
+.search-bar.desktop-only {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.search-bar.desktop-only .search-container {
+    margin: 0;
+}
+
+/* Search Toggle Button (Mobile) */
+.search-toggle {
+    display: flex;
+}
+
+@media (min-width: 768px) {
+    .search-toggle {
+        display: none; /* Hide search icon on larger screens */
+    }
+}
+
+/* Mobile Search Overlay */
+.search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    z-index: 200;
+    transform: translatex(-100%);
+    transition: transform 0.3s ease;
+}
+
+.search-overlay.active {
+    transform: translateY(0);
+}
+
+.search-overlay-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    gap: 10px;
+}
+
+.search-overlay .search-container {
+    flex: 1;
+    margin: 0;
+}
+
+.search-overlay .back-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
