@@ -243,7 +243,7 @@ img {
 
 .tab {
     flex: 1;
-    min-width: 80px;
+    min-width: 72px;
     padding: 10px 15px;
     text-align: center;
     background: none;
@@ -291,8 +291,8 @@ img {
 .subcategory-img {
     width: 60px;
     height: 60px;
-    border-radius: 50%;
-    border: 2px solid var(--primary-color);
+    
+   
     overflow: hidden;
     margin-bottom: 5px;
 }
@@ -728,7 +728,7 @@ img {
     width: 100%;
     background-color: var(--background-color);
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
     z-index: 90;
 }
@@ -1399,4 +1399,13 @@ img {
     font-size: 14px;
     margin-bottom: 15px;
     cursor: pointer;
+}
+@media (min-width: 768px) {
+    .search-bar.desktop-only {
+        display: block; /* Show search bar on larger screens */
+    }
+    
+    .header-actions .icon-btn:first-child {
+        display: none; /* Keep search icon hidden on larger screens */
+    }
 }
